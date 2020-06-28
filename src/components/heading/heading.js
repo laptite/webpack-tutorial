@@ -4,7 +4,7 @@ class Heading {
   render(pageName) {
     const h1 = document.createElement('h1');
     const body = document.querySelector('body');
-    h1.innerHTML = `Webpack Tutorial -- ${pageName}`;
+    h1.innerHTML = `Webpack Tutorial: ${pageName}`;
     body.appendChild(h1);
   }
 }

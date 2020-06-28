@@ -3,9 +3,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    'tutorial': './src/tutorial.js',
+    'kiwi': './src/kiwi.js'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, './dist'),
     publicPath: ''
   },
@@ -51,9 +54,18 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Webpack Tutorial',
-      template: 'src/index.hbs',
-      description: 'Udemy tutorial to learn Webpack 4'
+      filename: 'tutorial.html',
+      chunks: ['tutorial'],
+      title: 'Tutorial Btn',
+      description: 'Udemy tutorial-btn',
+      template: 'src/page-template.hbs'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'kiwi.html',
+      chunks: ['kiwi'],
+      title: 'Kiwi',
+      description: 'Kiwi Image Page',
+      template: 'src/page-template.hbs'
     })
   ]
 }
