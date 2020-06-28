@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, './dist'),
     publicPath: ''
   },
@@ -52,8 +52,8 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Webpack Tutorial',
-      template: 'src/index.hbs',
-      description: 'Udemy tutorial to learn Webpack 4'
+      description: 'Udemy tutorial to learn Webpack 4',
+      template: 'src/page-template.hbs'
     })
   ]
 }

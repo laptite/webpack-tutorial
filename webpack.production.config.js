@@ -11,6 +11,13 @@ module.exports = {
     publicPath: ''
   },
   mode: 'production',
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      minSize: 10000,
+      automaticNameDelimiter: '_'
+    }
+  }
   module: { 
     rules: [ 
       {
@@ -51,8 +58,8 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Webpack Tutorial',
-      template: 'src/index.hbs',
-      description: 'Udemy tutorial to learn Webpack 4'
+      description: 'Udemy tutorial to learn Webpack 4',
+      template: 'src/page-template.hbs'
     })
   ]
 }
