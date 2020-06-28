@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, './dist'),
-    publicPath: ''
+    publicPath: '/static/'
   },
   mode: 'production',
   optimization: {
@@ -17,7 +17,7 @@ module.exports = {
       minSize: 10000,
       automaticNameDelimiter: '_'
     }
-  }
+  },
   module: { 
     rules: [ 
       {
