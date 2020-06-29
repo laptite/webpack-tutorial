@@ -1,3 +1,6 @@
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.scss'
 import TutorialBtn from './components/tutorial-btn/tutorial-btn';
 import Heading from './components/heading/heading';
 
