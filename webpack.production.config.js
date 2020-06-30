@@ -17,7 +17,7 @@ module.exports = {
       minSize: 10000,
       automaticNameDelimiter: '_'
     }
-  }
+  },
   module: { 
     rules: [ 
       {
